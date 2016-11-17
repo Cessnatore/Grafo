@@ -78,9 +78,9 @@ public class Grafo<T> {
 				caminos.add(caminoact);
 			}
 			else{
-				List<T> aux;
-				aux=continuarLista(caminoact);
+
 				for(T nodo:vecinos(actual)){
+					List<T> aux=continuarLista(caminoact);
 					camino(nodo,llegada,aux,caminos);
 				}
 			}
@@ -90,7 +90,6 @@ public class Grafo<T> {
 		List<T> aux=new ArrayList<T>();
 		for (T elemento: lista) {
 			aux.add(elemento);
-
 		}
 		return aux;
 	}
