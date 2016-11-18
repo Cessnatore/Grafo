@@ -79,17 +79,12 @@ public class Grafo<T> {
 			}
 			else{
 				for(T nodo:vecinos(actual)){
-					List<T> aux=continuarLista(caminoact);
+					List<T> aux=new ArrayList<>();
+					aux.addAll(caminoact);
 					camino(nodo,llegada,aux,caminos);
 				}
 			}
 		}
 	}
-	private List<T> continuarLista(List<T> lista){
-		List<T> aux=new ArrayList<T>();
-		for (T elemento: lista) {
-			aux.add(elemento);
-		}
-		return aux;
-	}
+
 }
