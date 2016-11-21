@@ -2,7 +2,7 @@ import java.util.List;
 
 public class Areee {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) {/**/
 		Grafo<String> putos=new Grafo<String>("oh wa ah ah");
         putos.agregarNodo("iz0","oh wa ah ah");
         putos.agregarNodo("iz1","iz0");
