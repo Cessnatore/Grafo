@@ -27,8 +27,8 @@ public class Grafo<T> {
 		}
 	}
 	
-	List<T> nodos;
-	List<Enlace> enlaces=new ArrayList<Enlace>();
+	private List<T> nodos;
+	private List<Enlace> enlaces=new ArrayList<Enlace>();
 	
 	public Grafo(T nodo){
 		nodos=new ArrayList<T>();
@@ -79,9 +79,12 @@ public class Grafo<T> {
 			}
 			else{
 				for(T nodo:vecinos(actual)){
-					camino(nodo,llegada,caminoact,caminos);
+					List<T> aux=new ArrayList<>();
+					aux.addAll(caminoact);
+					camino(nodo,llegada,aux,caminos);
 				}
 			}
 		}
 	}
+
 }
